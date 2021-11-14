@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Mocha Tests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
+    <link rel="stylesheet" href="rezervacija.css">
+    
+    <style>
+    td{
+      border: 1px solid black;
+      height: 20px;
+      width: 20px;
+    }
+    </style>
+    
+</head>
+<body onload="ucitajPodatke()">
+   
+<div class="sadrzaj" style = "display: none;">
+        <label class="labeleOdabira">Izbor sale: </label>
+        <select name="listaSala" id="listaSala" onchange="obojiZauzecaPoziv()">
+            <option value="0-01">0-01</option>
+            <option value="0-02">0-02</option>
+            <option value="0-03">0-03</option>
+            <option value="0-04">0-04</option>
+            <option value="0-05">0-05</option>
+            <option value="0-06">0-06</option>
+            <option value="0-07">0-07</option>
+            <option value="0-08">0-08</option>
+            <option value="0-09">0-09</option>
+            <option value="1-01">1-01</option>
+            <option value="1-02">1-02</option>
+            <option value="1-03">1-03</option>
+            <option value="1-04">1-04</option>
+            <option value="1-05">1-05</option>
+            <option value="1-06">1-06</option>
+            <option value="1-07">1-07</option>
+            <option value="1-08">1-08</option>
+            <option value="1-09">1-09</option>
+            <option value="1-10">1-10</option>
+            <option value="1-11">1-11</option>
+            <option value="1-12">1-12</option>
+            <option value="1-13">1-13</option>
+            <option value="1-14">1-14</option>
+            <option value="1-15">1-15</option>
+            <option value="VA1">VA1</option>
+            <option value="VA2">VA2</option>
+            <option value="EE1">EE1</option>
+            <option value="EE2">EE2</option>
+            <option value="MA">MA</option>
+        </select>
+        <br>
+        <label class="labeleOdabira">Rezervacija periodična: </label>
+        <input type="checkbox" name="periodicnostSale" value="Periodicna">
+        <br>
+        <label class="labeleOdabira">Početak: </label>
+        <input type="time" value="10:00" name="vrijemePocetka" id="pocetak" onchange="obojiZauzecaPoziv()">
+        <br>
+        <label class="labeleOdabira">Kraj: </label>
+        <input type="time" value="20:00" name="vrijemeKraja" id="kraj" onchange="obojiZauzecaPoziv()">
+        <br>
+        <label class="labeleOdabira">Odabir predavača: </label>
+        <select name="predavac" id="listaPredavaca" onchange="obojiZauzecaPoziv()"></select>
+        <br>
+        
+    <div id="okvirKalendaraIButtona">
+    <div class="kalendar">
+        <label id="nazivMjeseca">Novembar</label>
+    <ul class="daniUSedmici">
+        <li class="danSedmice">PON</li>
+        <li class="danSedmice">UTO</li>
+        <li class="danSedmice">SRI</li>
+        <li class="danSedmice">ČET</li>
+        <li class="danSedmice">PET</li>
+        <li class="danSedmice">SUB</li>
+        <li class="danSedmice">NED</li>
+    </ul>
+    <ul class="brojevi">
+    <li class="dani"><div class="broj">0</div>
+        <div class="slobodna"></div></li>
+    <li class="dani"><div class="broj">0</div>
+        <div class="slobodna"></div></li>
+    <li class="dani"><div class="broj">0</div>
+        <div class="slobodna"></div></li>
+    <li class="dani"><div class="broj">0</div>
+        <div class="slobodna"></div></li>
+    <li class="dani"><div class="broj">0</div>
+        <div class="slobodna"></div></li>
+    <li class="dani"><div class="broj">0</div>
+        <div class="slobodna"></li>
+    <li class="dani"><div class="broj">0</div>
+        <div class="slobodna"></li>
+    </ul>
+    <ul class="brojevi">
+    <li class="dani"><div class="broj">0</div>
+        <div class="slobodna"></div></li>
+    <li class="dani"><div class="broj">0</div>
+        <div class="slobodna"></div></li>
+    <li class="dani"><div class="broj">0</div>
+        <div class="slobodna"></div></li>
+    <li class="dani"><div class="broj">0</div>
+         <div class="slobodna"></div></li>
+    <li class="dani"><div class="broj">0</div>
+        <div class="slobodna"></div></li>
+    <li class="dani"><div class="broj">0</div>
+        <div class="slobodna"></div></li>
+    <li class="dani"><div class="broj">0</div>
+        <div class="slobodna"></div></li>
+    </ul>
+    <ul class="brojevi">
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+             <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+    </ul>
+    <ul class="brojevi">
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+             <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+    </ul>
+    <ul class="brojevi">
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+    </ul>
+    <ul class="brojevi">
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+             <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+        <li class="dani"><div class="broj">0</div>
+            <div class="slobodna"></div></li>
+    </ul>
+    </div>
+    
+    <br>
+        <button class="dugmePrethodni" onclick="mijenjajPrethodni()">Prethodni</button>
+        <button class="dugmeSljedeci" onclick="mijenjajSljedeci()">Sljedeci</button>
+</div>
+</div><br>
+<div id="ispis"></div>
+   <div id="mocha"></div>
+
+  
+   <script src="https://unpkg.com/chai/chai.js"></script>
+   <script src="https://unpkg.com/mocha/mocha.js"></script>
+ 
+   <script class="mocha-init">
+     mocha.setup('bdd');
+     mocha.checkLeaks();
+   </script>
+   <script src="kalendar.js"></script>
+   <script src="pomocniKalendar.js"></script>
+   <script src="testovi.js"></script>
+   <script src="pozivi.js"></script>
+   <script src="rezervacija.js"></script>
+   <script class="mocha-exec">
+     mocha.run();
+   </script>
+</body>
+</html>

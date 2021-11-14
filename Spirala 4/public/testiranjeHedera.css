@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+a.aktivnaStranica{
+    text-decoration: none;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#header{
+    height: 15%;
+}
+.meni{
+    background-color: steelblue;
+    margin-top: 70px;
+    position: relative;
+    height: 100%;
+}
+
+.meni ul{
+    list-style-type: none;
+    padding: 5px;
+    bottom: 0;
+    position: absolute;
+}
+.meni li{
+    display: inline;
+    padding-left: 5px;
+}
+.meni li a{
+    color: black;
+}
+.logo img{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 35px;
+    left: 50%;
+}
+@media (max-width: 600px){
+    .meni ul li{
+        display: block;
+        padding-left: 5px;  
+    }
+    
+    #header{
+        height: 20%;
+    }
+}
+
+
+

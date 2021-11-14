@@ -1,0 +1,48 @@
+.sadrzaj{
+    margin-top: 5px;
+    background-color: steelblue;
+}
+
+.slika img{ 
+    width: 400px;
+    height: 250px;
+    object-fit: fill;
+}
+@media (min-width: 1266px)
+{
+.galerija{
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 5vw);
+    grid-gap: 15px;
+}
+}
+@media (max-width: 1265px) {
+    .galerija {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto, 5vw);
+    grid-gap: 15px;
+    
+    }
+  }
+
+@media (max-width: 845px) {
+    .galerija {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto, 5vw);
+    grid-gap: 15px;
+    
+    }
+  } 
+@media (max-width: 600px)
+{
+    .slika img{
+        transform: scale(0.8);
+    }
+    .galerija{
+        padding: 0;
+    }
+}

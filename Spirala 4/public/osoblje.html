@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="osoblje.css">
+<link rel="stylesheet" href="testiranjeHedera.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="pozivi.js"></script>
+<script src="osobljeHTML.js"></script>
+</head>
+<body onload="popunjavajSvakih30()">
+    <div id="header">
+        <div class="meni">
+            <ul>
+                <li><a href="pocetna.html">Početna</a></li>
+                <li><a href="sale.html">Sale</a></li>
+                <li><a href="unos.html">Unos</a></li>
+                <li><a href="rezervacija.html">Rezervacije</a></li>
+                <li><a class="aktivnaStranica" href="osoblje.html">Osoblje</a></li>
+            </ul>
+        </div>
+        <div class="logo">
+            <img src="https://www.americasfinestlabels.com/includes/work/image_cache/4b4f4b63cc837b5f01ce2d718b0f9be2.thumb.jpg" alt="crveni kvadrat">
+        </div>
+    </div>
+<div class="sadrzaj">
+    <select name="zauzeca" id="trenutnoZauzeto" onchange="obojiZauzecaPoziv()"></select>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+label{
+    display: inline-block;
+    width: 150px;
+}
+.sadrzaj{
+    background-color: steelblue;
+    height: 100%;
+    margin-top: 5px;
+    overflow: auto;
+}
+.formaUnosa{
+    margin: 5px 0 0 5px;
+}
+#unos{
+    margin-left: 154px;
+}
+@media (max-width: 600px){
+    .formaUnosa input{
+        display: block;
+    }
+    .formaUnosa br{
+        display: none;
+    }
+    #unos{
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,46 @@
+.sadrzaj{
+    height: 100%;
+    background-color: steelblue;
+    margin-top: 5px;
+    overflow: auto;
+}
+.tabelaSala
+{
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 5px;
+}
+.headerSprat{
+    background-color: #696969;
+    padding: 10px;
+}
+.headerRedni{
+    background-color: #C0C0C0;
+    text-align: left;
+}
+.headerSprat, .headerRedni{
+    border-style: ridge;
+}
+.sala{
+    background-color: white;
+}
+.kancelarija{
+    background-color: grey;
+}
+.slobodnaSala{
+    background-color: lime;
+}
+.zauzetaSala{
+    background-color: orangered;
+}
+.sala, .kancelarija, .slobodnaSala, .zauzetaSala{
+    padding-bottom: 10px;
+    border: 1px solid grey;
+}
+@media (max-width: 600px){
+    
+        tr:nth-child(1), .headerRedni{
+            display: none;
+        }
+
+    }

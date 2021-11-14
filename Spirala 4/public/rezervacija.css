@@ -1,0 +1,103 @@
+input{
+    margin-top: 10px;
+}
+.sadrzaj{
+    background-color: steelblue;
+    margin-top: 5px;
+    height: 85%;
+    overflow: auto;
+}
+.kalendar{
+    margin: 10px;
+    width: 450px;
+}
+.kalendar ul{
+    list-style-type: none;
+    margin-left: 0;  
+}
+.daniUSedmici li{
+    margin: 5px;
+}
+#nazivMjeseca{ 
+    padding: 5px;
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+}
+.brojevi li{
+    margin: 5px;
+}
+.brojevi{
+    margin-left: 100px;
+}
+
+.slobodna{
+    height: 17px;
+    width: 46px;
+}
+.broj{
+    border-bottom: 2px solid blue;   
+    
+}
+.dugmePrethodni, .dugmeSljedeci{
+    background-color: steelblue;
+    width: 100px;
+    padding: 10px;
+    margin: 0 10px 0 10px;
+}
+.dugmeSljedeci{
+    float: right;
+}
+#okvirKalendaraIButtona, #nazivMjeseca, .kalendar, .daniUSedmici li, .brojevi li{
+    display: inline-block;
+}
+.sadrzaj #listaSala{
+    width: 100px;
+    margin-top: 5px;
+}
+.labeleOdabira{
+    margin: 10px 0 0 10px;
+}
+.dugmePrethodni, .dugmeSljedeci, .dani, .kalendar, .daniUSedmici li{
+    border: 2px solid blue;
+}
+.brojevi, .daniUSedmici{
+    padding: 0;
+}
+
+.dugmePrethodni, .dugmeSljedeci, .dani, .daniUSedmici li{
+    text-align: center; 
+} 
+.dani, .daniUSedmici li{
+    border-collapse: collapse;
+}
+.brojevi li, .daniUSedmici li{
+    width: 50px;
+}
+#listaPredavaca
+{
+    width: 100px;
+    margin-top: 5px;
+}
+@media(min-width: 601px)
+{
+    .kalendar2{
+        display: none;
+    }
+
+}
+@media (max-width: 600px){
+    .kalendar{
+        display: none;
+    }
+    .kalendar2{
+        border: 2px solid blue;
+        margin: 10px 0 0 10px;
+    }
+    #nazivMjeseca{
+        display: block;
+    }
+    .brojevi{
+        margin-left: 0;
+    }   
+}
